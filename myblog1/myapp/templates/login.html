@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form action="{% url 'check_auth' %}" method="post">{% csrf_token %}
+        <div class="form-group col-md-6">
+            <label for="exampleInputusername1">User name</label>
+            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Enter Username" name="username">
+            
+        </div>
+       
+        <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+        </div>
+        <br><br>
+        <button type="submit">Login</button>
+
+
+    </form>
+    <br><br>
+    Click<a href="{% url 'reg' %}" >here</a>for login
+</body>
+</html>
